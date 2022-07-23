@@ -1,0 +1,28 @@
+.statistics {
+  display: block;
+  margin-left: 15px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: red;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.statList {
+  display: flex;
+  padding-left: 0;
+}
+
+.label {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.title {
+  font-style: italic;
+}
