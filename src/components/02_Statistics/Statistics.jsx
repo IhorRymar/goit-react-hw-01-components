@@ -4,7 +4,7 @@ import css from '../02_Statistics/Statistics.module.css';
 function Statistics({ title, stats }) {
   return (
     <section className={css.statistics}>
-      <h2 className={css.title}>{title}</h2>
+      {title && <h2 className={css.title}>{title}</h2>}
 
       <ul className={css.statList}>
         {stats.map(stat => (
@@ -19,8 +19,14 @@ function Statistics({ title, stats }) {
 }
 
 Statistics.propTypes = {
-  label: PropTypes.string,
-  percentage: PropTypes.number,
+  title: PropTypes.string.isRequired,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
 };
 
 export default Statistics;
